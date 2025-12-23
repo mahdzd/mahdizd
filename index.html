@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Portfolio of projects and experience." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container">
+    <nav class="nav">
+      <a class="logo" href="#">Your Name</a>
+      <div class="links">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <h1>Mechatronics Engineer • Robotics • Embedded Systems</h1>
+      <p>
+        I build control systems, embedded prototypes, and practical robotics.
+        Here are a few projects I’m proud of.
+      </p>
+      <div class="cta">
+        <a class="btn" href="#projects">View Projects</a>
+        <a class="btn ghost" href="https://github.com/YOUR_GITHUB" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </section>
+  </header>
+
+  <main class="container">
+    <section id="projects" class="section">
+      <div class="section-title">
+        <h2>Projects</h2>
+        <p>Selected work (add/remove as needed).</p>
+      </div>
+
+      <div class="grid" id="projectGrid"></div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-title">
+        <h2>About</h2>
+      </div>
+      <div class="card">
+        <p>
+          Write a short bio here: your focus areas, tools (MATLAB/Simulink, Raspberry Pi, ESP32, SolidWorks),
+          and what you’re currently working on.
+        </p>
+        <ul class="bullets">
+          <li>Controls: PID, state-space, observers</li>
+          <li>Embedded: Raspberry Pi / ESP32, sensors, I2C</li>
+          <li>CAD: SolidWorks assemblies, motion studies</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="section-title">
+        <h2>Contact</h2>
+        <p>Best ways to reach me.</p>
+      </div>
+
+      <div class="card contact">
+        <a href="mailto:you@example.com">you@example.com</a>
+        <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://github.com/YOUR_GITHUB" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <span>© <span id="year"></span> Your Name</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

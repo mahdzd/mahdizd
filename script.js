@@ -24,7 +24,8 @@ const projects = [
     tags: ["ESP32", "Sensors", "Instrumentation"],
     repo:"",
     demo: "",
-    // photo: add a block diagram / sensor architecture figure (assets/projects/vip.png)
+    image: "assets/projects/VIP.png",
+    
   },
 
   {

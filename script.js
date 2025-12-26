@@ -24,7 +24,7 @@ const projects = [
     tags: ["ESP32", "Sensors", "Instrumentation"],
     repo:"",
     demo: "",
-    image: "assets/projects/VIP.png",
+    image: "assets/projects/VIP.png"
     
   },
 

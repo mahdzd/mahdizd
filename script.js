@@ -20,7 +20,7 @@ const projects = [
 },
 {
     title: "VIP+ Solar Panel Cleaning — Instrumentation",
-    desc: "Instrumentation plan for sensors + water recycling monitoring and integration.",
+    desc: "We redesigned a solar panels cleaning system in collaboration between the industrial hub and industrial partners, where I was responsible for the instrumentation work using ESP32 and diverse sensors.",
     tags: ["ESP32", "Sensors", "Instrumentation"],
     repo:"",
     demo: "",

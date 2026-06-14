@@ -1,139 +1,423 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mahdi Zein Al Dine — Portfolio</title>
-  <meta name="description" content="Portfolio of projects and experience." />
+  <meta name="description" content="Mechatronics Engineering student, robotics researcher, and technology enthusiast at the Lebanese American University." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="container">
-    <nav class="nav">
-      <a class="logo" href="#">Mahdi Zein Al Dine</a>
-      <div class="links">
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="assets/CV/Mahdi_Zein_Al_Dine_CV.pdf" target="_blank">CV</a>
 
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#">MZD</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#honors">Honors</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="assets/CV/Mahdi_Zein_Al_Dine_CV.pdf" class="nav-resume" target="_blank">Resume ↗</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">🌙</button>
+        <button class="icon-btn menu-btn" id="menuToggle" aria-label="Open menu">☰</button>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-   <section class="hero hero-grid">
-  <div class="hero-text">
-    <h1>Mechatronics Engineering Student • Robotics Researcher  • Tech enthusiast</h1>
-    <p>
-      Senior Mechatronics Engineering student at the Lebanese American University, passionate about technology and innovation, with strong academic performance, hands-on project experience, and a solid foundation in applied mathematics for control and robotics.</p>
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-left">
+        <span class="hero-badge">🇱🇧 Beirut, Lebanon</span>
+        <h1 class="hero-name">Mahdi<br>Zein Al Dine</h1>
+        <p class="hero-role">
+          <span class="role-static">I build </span><span id="typedText" class="typed-word"></span><span class="cursor">|</span>
+        </p>
+        <p class="hero-bio">
+          Senior Mechatronics Engineering student at LAU — researching programmable matter,
+          designing robots, and turning control theory into physical systems.
+        </p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+          <a href="https://github.com/mahdzd" class="btn btn-ghost" target="_blank" rel="noreferrer">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="avatar-wrap">
+          <div class="avatar-glow"></div>
+          <div class="avatar-ring">
+            <img src="assets/profile.jpg" alt="Mahdi Zein Al Dine" class="avatar-img">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-    <div class="cta">
-      <a class="btn" href="#projects">View Projects</a>
-      <a class="btn ghost" href="https://github.com/mahdzd" target="_blank" rel="noreferrer">
-        GitHub
-      </a>
+  <!-- Stats -->
+  <div class="stats-band">
+    <div class="stats-grid">
+      <div class="stat-cell">
+        <span class="stat-num" data-target="3.87" data-dec="2">0</span>
+        <span class="stat-label">CGPA / 4.0</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-num" data-target="300" data-suf="+">0</span>
+        <span class="stat-label">Tutoring Hours</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-num" data-target="7">0</span>
+        <span class="stat-label">Projects Built</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-num" data-target="3">0</span>
+        <span class="stat-label">Competition Awards</span>
+      </div>
     </div>
   </div>
 
-  <div class="hero-avatar">
-    <img src="assets/profile.jpg" alt="Mahdi Zein Al Dine">
-  </div>
+  <main>
 
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Background</span>
+          <h2>Experience</h2>
+        </div>
+        <div class="timeline">
 
+          <div class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="glass-card tl-card">
+              <div class="tl-top">
+                <div>
+                  <h3>Researcher — Programmable Matter</h3>
+                  <p class="tl-org">LAU, Lebanon &times; UMLP, France</p>
+                </div>
+                <span class="tl-date">Jan 2026 – Present</span>
+              </div>
+              <ul class="tl-list">
+                <li>Investigating modular reconfigurable robot (MRR) architectures as part of an international research collaboration between LAU and UMLP</li>
+                <li>Designing and prototyping a novel multi-output, single-input actuation system for the Datom MRR platform to enhance module functionality while reducing actuator complexity and cost</li>
+              </ul>
+              <div class="chips">
+                <span class="chip">Robotics</span>
+                <span class="chip">Programmable Matter</span>
+                <span class="chip">Prototyping</span>
+                <span class="chip">Research</span>
+              </div>
+            </div>
+          </div>
 
+          <div class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="glass-card tl-card">
+              <div class="tl-top">
+                <div>
+                  <h3>Academic Tutor</h3>
+                  <p class="tl-org">LAU, Beirut</p>
+                </div>
+                <span class="tl-date">Feb 2024 – Present</span>
+              </div>
+              <ul class="tl-list">
+                <li>Provided academic support in core Engineering and Mathematics subjects, improving student performance and engagement</li>
+                <li>Completed 80+ hours with the official academic success center and 300+ hours of private tutoring</li>
+              </ul>
+              <div class="chips">
+                <span class="chip">Teaching</span>
+                <span class="chip">Mathematics</span>
+                <span class="chip">Engineering</span>
+              </div>
+            </div>
+          </div>
 
-     
+          <div class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="glass-card tl-card">
+              <div class="tl-top">
+                <div>
+                  <h3>Vice President, Student Council</h3>
+                  <p class="tl-org">LAU, Beirut</p>
+                </div>
+                <span class="tl-date">Sep 2024 – Sep 2025</span>
+              </div>
+              <ul class="tl-list">
+                <li>Elected VP representing student interests and contributing to campus-wide decision-making and policy discussions</li>
+                <li>Organized and supervised student events while coordinating with university administration to improve campus engagement</li>
+              </ul>
+              <div class="chips">
+                <span class="chip">Leadership</span>
+                <span class="chip">Student Affairs</span>
+                <span class="chip">Event Planning</span>
+              </div>
+            </div>
+          </div>
 
-    </section>
-     <section class="stats">
-  <div class="stat">
-    <div class="statNum">3.9</div>
-    <div class="statLabel">CGPA</div>
-  </div>
-  <div class="stat">
-    <div class="statNum">Robotics / Control Systems</div>
-    <div class="statLabel">Focus</div>
-  </div>
-  <div class="stat">
-    <div class="statNum">Lebanese American University</div>
-    <div class="statLabel">Lebanon / Byblos</div>
-  </div>
-</section>  
-    
-  </header>
-
-  <main class="container">
-    <section id="projects" class="section">
-      <div class="section-title">
-        <h2>Projects</h2>
-        <p>Selected work.</p>
+        </div>
       </div>
-
-      <div class="grid" id="projectGrid"></div>
     </section>
 
-   <section id="about" class="section">
-  <div class="section-title">
-    <h2>About</h2>
-  </div>
+    <!-- Projects -->
+    <section id="projects" class="section section-dim">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Work</span>
+          <h2>Projects</h2>
+          <p>Click any card to explore details.</p>
+        </div>
+        <div class="filter-row" id="filterRow">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="robotics">Robotics</button>
+          <button class="filter-btn" data-filter="cad">CAD / Design</button>
+          <button class="filter-btn" data-filter="electronics">Electronics</button>
+          <button class="filter-btn" data-filter="software">Software</button>
+        </div>
+        <div class="proj-grid" id="projectGrid"></div>
+      </div>
+    </section>
 
-  <div class="card">
-   <p>
-  Senior Mechatronics Engineering student at the Lebanese American University (LAU) with a strong academic record,
-  hands-on engineering experience, and active involvement in tutoring and student leadership.
-</p>
+    <!-- Modal -->
+    <div id="projectModal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal-scrim" id="modalScrim"></div>
+      <div class="modal-box">
+        <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+        <div class="modal-layout">
+          <div class="modal-media" id="modalMedia"></div>
+          <div class="modal-info">
+            <div class="chips" id="modalTags"></div>
+            <h3 id="modalTitle"></h3>
+            <p id="modalDesc"></p>
+            <div class="modal-links" id="modalLinks"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<p>
-  I work as an academic tutor for engineering and mathematics courses, supporting students with problem-solving,
-  concept clarification, and exam preparation across multiple technical subjects.
-</p>
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Expertise</span>
+          <h2>Skills &amp; Tools</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="glass-card skill-card reveal">
+            <div class="skill-icon">💻</div>
+            <h3>Programming</h3>
+            <div class="pills">
+              <span class="pill">Python</span>
+              <span class="pill">C++</span>
+              <span class="pill">Java</span>
+              <span class="pill">Assembly</span>
+            </div>
+          </div>
+          <div class="glass-card skill-card reveal">
+            <div class="skill-icon">🤖</div>
+            <h3>Robotics &amp; Embedded</h3>
+            <div class="pills">
+              <span class="pill">Raspberry Pi</span>
+              <span class="pill">ESP32</span>
+              <span class="pill">Arduino</span>
+            </div>
+          </div>
+          <div class="glass-card skill-card reveal">
+            <div class="skill-icon">📊</div>
+            <h3>Modeling &amp; Simulation</h3>
+            <div class="pills">
+              <span class="pill">MATLAB</span>
+              <span class="pill">Simulink</span>
+              <span class="pill">SPICE</span>
+              <span class="pill">Quartus</span>
+            </div>
+          </div>
+          <div class="glass-card skill-card reveal">
+            <div class="skill-icon">📐</div>
+            <h3>CAD &amp; Design</h3>
+            <div class="pills">
+              <span class="pill pill-accent">SolidWorks ✓ CSWA</span>
+              <span class="pill">AutoCAD</span>
+              <span class="pill">KiCAD</span>
+            </div>
+          </div>
+          <div class="glass-card skill-card reveal">
+            <div class="skill-icon">🛠️</div>
+            <h3>Tools &amp; Dev</h3>
+            <div class="pills">
+              <span class="pill">Git / GitHub</span>
+              <span class="pill">Linux</span>
+              <span class="pill">LaTeX</span>
+              <span class="pill">Photoshop</span>
+            </div>
+          </div>
+          <div class="glass-card skill-card reveal">
+            <div class="skill-icon">🌐</div>
+            <h3>Languages</h3>
+            <div class="pills">
+              <span class="pill">Arabic — Native</span>
+              <span class="pill">English — Proficient</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<p>
-  Also, I served as Vice President of the Student Council at LAU–Beirut, where I coordinated student initiatives,
-  represented student interests, and worked closely with university administration to improve campus life.
-</p>
+    <!-- Honors -->
+    <section id="honors" class="section section-dim">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Recognition</span>
+          <h2>Honors &amp; Awards</h2>
+        </div>
+        <div class="honors-grid">
+          <div class="glass-card honor-card reveal">
+            <span class="honor-icon">🥉</span>
+            <div>
+              <h3>3rd Place — Raspberry Pi Competition</h3>
+              <p>IEEE Lebanon Section, 2025</p>
+            </div>
+          </div>
+          <div class="glass-card honor-card reveal">
+            <span class="honor-icon">🏅</span>
+            <div>
+              <h3>Honorable Mention — Microelectronics Olympiad</h3>
+              <p>Lebanese American University, 2026</p>
+            </div>
+          </div>
+          <div class="glass-card honor-card reveal">
+            <span class="honor-icon">🏎️</span>
+            <div>
+              <h3>WRO Future Engineers</h3>
+              <p>Lebanon National Competition, 2025</p>
+            </div>
+          </div>
+          <div class="glass-card honor-card reveal">
+            <span class="honor-icon">📜</span>
+            <div>
+              <h3>Certified SolidWorks Associate (CSWA)</h3>
+              <p>Dassault Systèmes, 2025</p>
+            </div>
+          </div>
+          <div class="glass-card honor-card reveal">
+            <span class="honor-icon">⭐</span>
+            <div>
+              <h3>Dean's Honor List</h3>
+              <p>Lebanese American University</p>
+            </div>
+          </div>
+          <div class="glass-card honor-card reveal">
+            <span class="honor-icon">🎓</span>
+            <div>
+              <h3>Lebanese Baccalaureate Scholarship</h3>
+              <p>Lebanese American University</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<p>
-  Recently, I completed a summer internship in the Energy Program at LAU–Beirut, focusing on sustainable facility management,
-  HVAC systems, energy efficiency, and exposure to ASHRAE standards and building management systems.
-</p>
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">About</span>
+          <h2>Who I Am</h2>
+        </div>
+        <div class="about-layout">
+          <div class="glass-card about-card reveal">
+            <p>
+              I'm a Senior Mechatronics Engineering student at the Lebanese American University,
+              driven by a deep curiosity about how intelligent machines interact with the physical world.
+              My focus spans control systems, robotics, and embedded systems — where mathematics meets hardware.
+            </p>
+            <p>
+              My current research, an international collaboration between LAU and UMLP (France), explores
+              programmable matter — designing modular robots that can reconfigure themselves to perform
+              different tasks. I'm specifically developing a novel actuation system for the Datom MRR platform.
+            </p>
+            <p>
+              Outside the lab, I've invested 300+ hours tutoring engineering and mathematics, served as
+              Vice President of the Student Council, and competed in national robotics competitions.
+              I believe the best engineers can teach, lead, and build.
+            </p>
+            <div class="about-facts">
+              <div class="fact">
+                <span class="fact-key">Education</span>
+                <span class="fact-val">BE Mechatronics — LAU (2023–2027)</span>
+              </div>
+              <div class="fact">
+                <span class="fact-key">CGPA</span>
+                <span class="fact-val">3.87 / 4.0 — Dean's Honor List</span>
+              </div>
+              <div class="fact">
+                <span class="fact-key">Location</span>
+                <span class="fact-val">Beirut, Lebanon</span>
+              </div>
+              <div class="fact">
+                <span class="fact-key">Research</span>
+                <span class="fact-val">Programmable Matter / MRR Systems</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<p>
-  I am currently working on a research project on programmable matter in collaboration between LAU (Lebanon) and UMLP (France),
-  with an interest in building practical, well-modeled systems that bridge theory and real-world implementation,
-  particularly in control systems, robotics, and automation.
-</p>
-
-
-    <ul class="bullets">
-    
-      <li><strong>Programming Languages:</strong> Python, Java, C++, Assembly</li>
-      <li><strong>Modeling &amp; Simulation:</strong> MATLAB, Simulink, SPICE, Quartus</li>
-      <li><strong>Embedded &amp; Hardware:</strong> Arduino, Raspberry Pi, ESP32</li>
-      <li><strong>CAD:</strong> SolidWorks, AutoCAD, KiCAD</li>
-      <li><strong>Digital &amp; Tools:</strong> Git/GitHub, LaTeX, Photoshop, Premiere</li>
-      <li><strong>Languages:</strong> Arabic (native), English (proficient)</li>
-    </ul>
-  </div>
-</section>
-
-
-    <section id="contact" class="section">
-  <div class="section-title">
-    <h2>Contact</h2>
-    <p>Best ways to reach me.</p>
-  </div>
-
-  <div class="card contact">
-    <a href="mailto:zeinaldinmahdi@gmail.com">zeinaldinmahdi@gmail.com</a>
-    <a href="https://github.com/mahdzd" target="_blank">GitHub</a>
-    <a href="https://linkedin.com/in/mahdizd" target="_blank">LinkedIn</a>
-  </div>
-</section>
+    <!-- Contact -->
+    <section id="contact" class="section section-dim">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Connect</span>
+          <h2>Get in Touch</h2>
+          <p>Open to research collaborations, internships, and interesting projects.</p>
+        </div>
+        <div class="contact-grid">
+          <a class="glass-card contact-card reveal" href="mailto:zeinaldinmahdi@gmail.com">
+            <span class="contact-icon">✉️</span>
+            <span class="contact-key">Email</span>
+            <span class="contact-val">zeinaldinmahdi@gmail.com</span>
+          </a>
+          <a class="glass-card contact-card reveal" href="https://github.com/mahdzd" target="_blank" rel="noreferrer">
+            <span class="contact-icon">💻</span>
+            <span class="contact-key">GitHub</span>
+            <span class="contact-val">github.com/mahdzd</span>
+          </a>
+          <a class="glass-card contact-card reveal" href="https://linkedin.com/in/mahdizd" target="_blank" rel="noreferrer">
+            <span class="contact-icon">💼</span>
+            <span class="contact-key">LinkedIn</span>
+            <span class="contact-val">linkedin.com/in/mahdizd</span>
+          </a>
+          <a class="glass-card contact-card reveal" href="assets/CV/Mahdi_Zein_Al_Dine_CV.pdf" target="_blank">
+            <span class="contact-icon">📄</span>
+            <span class="contact-key">Resume</span>
+            <span class="contact-val">Download CV</span>
+          </a>
+        </div>
+      </div>
+    </section>
 
   </main>
 
-  <footer class="container footer">
-    <span>© <span id="year"></span> Mahdi Zein Al Dine</span>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-logo">MZD</span>
+      <p class="footer-copy">© <span id="year"></span> Mahdi Zein Al Dine. Built with care.</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
